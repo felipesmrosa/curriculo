@@ -1,0 +1,73 @@
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 28px;
+    border: 2px solid #fff;
+}
+.acordeon.open {
+    background: #55569E;
+    border-color: #55569E;
+}
+.acordeon .trigger {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 28px;
+    background-color: transparent;
+    color: #fff;
+}
+.acordeon .trigger::after {
+    content: '';
+    display: inline-block;
+    background-image: url(../imgs/icons/setinha-baixo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 8%;
+    height: 1rem;
+    transition: 1s;
+}
+.acordeon.open .trigger::after {
+    transform: rotate(180deg);
+}
+.acordeon .content {
+    overflow: hidden;
+    height: 0;
+    transition: 1s;
+    opacity: 0;
+}
+.acordeon.open .content {
+    display: flex;
+    padding: 1rem;
+    height: auto;
+    border-top: 1px solid;
+    opacity: 1;
+    width: 85%;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+.acordeon.open .content ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.3rem;
+    letter-spacing: 0.1rem;
+}
+.acordeon.open .content li {
+    list-style: none;
+}
+.acordeon.open .content li::before {
+    content: '';
+    background-image: url(../imgs/icons/verificado.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 0.8rem;
+    display: inline-block;
+}

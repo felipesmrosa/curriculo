@@ -1,0 +1,39 @@
+.portfolio {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+.portfolio li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+}
+.acordeon.open .content span.title::before {
+    content: '';
+    background-image: url(../imgs/icons/github.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1rem;
+    display: inline-block;
+}
+.acordeon.open .content a {
+    color: #dadada;
+}
+.acordeon.open .content a::before {
+    content: '';
+    background-image: url(../imgs/icons/link.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1rem;
+    display: inline-block;
+}
+.acordeon.open .content.portfolio li::before {
+    display: none;
+}

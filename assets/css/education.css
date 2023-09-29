@@ -1,0 +1,15 @@
+.acordeon.open .content.education li.education::before {
+    display: none;
+}
+.acordeon.open .content.education hr {
+    border: 1px solid #fff;
+    margin: 1rem 0;
+    width: 99%;
+}
+h2 {
+    margin: .5rem 0;
+}
+p.textoCinza {
+    color: #dadada;
+    margin-left: 1.2rem;
+}

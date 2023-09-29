@@ -1,0 +1,240 @@
+@import url('global.css');
+@import url('acordeon.css');
+@import url('portfolio.css');
+@import url('experience.css');
+@import url('skills.css');
+@import url('education.css');
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.header::after {
+    content: '';
+    display: inline-block;
+    width: 2.5rem;
+    height: 1rem;
+    background-image: url(../imgs/icons/header.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.header img#fotoPerfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 70px -30px #fff;
+}
+.header h1#title {
+    text-align: center;
+    font-weight: 100;
+}
+.header .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.header .informacoes a {
+    text-decoration: none;
+    color: #fff;
+}
+.header .informacoes a:hover {
+    text-decoration: underline;
+}
+.informacoes p {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.08rem;
+}
+.informacoes p::before {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.informacoes .job::before {
+    background-image: url(../imgs/icons/user.svg);
+}
+.informacoes .location::before {
+    background-image: url(../imgs/icons/maps.svg);
+}
+.informacoes .phone::before {
+    background-image: url(../imgs/icons/whatsapp.svg);
+}
+.informacoes .mail::before {
+    background-image: url(../imgs/icons/email.svg);
+}
+
+@media screen and (min-width: 868px) {
+    .main::before {
+        filter: blur(150px);
+    }
+    .main::after {
+        filter: blur(150px);
+    }
+    .header {
+        display: grid;
+        gap: 0 8rem;
+        grid-template-areas:
+            "fotoPerfil title"
+            "fotoPerfil informacoes";
+    }
+    .header img#fotoPerfil {
+        grid-area: fotoPerfil;
+        margin: 0 auto;
+    }
+    .header h1#title {
+        text-align: end;
+    }
+    .header .title {
+        grid-area: title;
+    }
+    .header .informacoes {
+        align-items: flex-end;
+        grid-area: informacoes;
+    }
+    .informacoes p::before {
+        display: none;
+    }
+    .informacoes p::after {
+        content: '';
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        margin-left: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .informacoes .job::after {
+        background-image: url(../imgs/icons/user.svg);
+    }
+    .informacoes .location::after {
+        background-image: url(../imgs/icons/maps.svg);
+    }
+    .informacoes .phone::after {
+        background-image: url(../imgs/icons/whatsapp.svg);
+    }
+    .informacoes .mail::after {
+        background-image: url(../imgs/icons/email.svg);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main {
+        margin: 0 auto;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        max-width: 75%;
+    }
+    .header {
+        gap: 0rem 5rem;
+    }
+    .header h1#title {
+        text-align: start;
+    }
+    .header .informacoes {
+        align-items: flex-start;
+    }
+    .informacoes p::after {
+        display: none;
+    }
+    .informacoes p::before {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .main {
+        max-width: 52%;
+    }
+    .main::before {
+        top: -5rem;
+        left: -10rem;
+        filter: blur(200px);
+    }
+    .main::after {
+        bottom: -5rem;
+        right: -10rem;
+        filter: blur(200px);
+    }
+    .acordeon .trigger::after {
+        width: 4%;
+    }
+    .header {
+        gap: 0rem 3rem;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .main {
+        max-width: 45%;
+    }
+    .main::before {
+        top: -30rem;
+        left: -28rem;
+        transform: rotate(325deg);
+        filter: blur(250px);
+    }
+    .main::after {
+        bottom: -30rem;
+        right: -28rem;
+        transform: rotate(140deg);
+        filter: blur(250px);
+    }
+    .acordeon .trigger::after {
+        width: 4%;
+    }
+    .acordeon .trigger  {
+        padding: 1.35rem 1.5rem;
+    }
+    .header {
+        gap: 0rem 8rem;
+    }
+    .acordeon.open .content.idio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .acordeon.open .content ul#idiomas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 9rem;
+        letter-spacing: 0.1rem;
+    }
+    section.personalSkills {
+        margin-left: 0;
+    }
+    .acordeon.open .content {
+        width: 100%;
+    }
+    .skills .tools ul#linguagens {
+        padding-left: 0;
+    }
+    .skills .tools ul li img.toolsSkill {
+        width: 75%;
+    }
+    .acordeon.open .content ol.habilidades {
+        padding-left: 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width: 97%;
+    }
+    .acordeon.open .content ol.habilidades li {
+        list-style: none;
+        padding-left: 1rem;
+    }
+}

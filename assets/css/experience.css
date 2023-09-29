@@ -1,0 +1,30 @@
+.acordeon.open .content p.period::before {
+    content: '';
+    background-image: url(../imgs/icons/calendario.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1rem;
+    display: inline-block;
+}
+.acordeon.open .content.experience li::before {
+    display: none;
+}
+.acordeon.open .content.experience span.title::before {
+    display: none;
+}
+.acordeon.open .content.experience li {
+    margin-top: 0rem;
+}
+.acordeon.open .content.content.experience p.period {
+    font-size: 0.8rem;
+}
+.acordeon.open .content.experience hr {
+    border: 1px solid #fff;
+    margin: 1rem 0;
+    width: 99%;
+}
+.acordeon.open .content.experience #experienceArea {
+    text-indent: 25px;
+    font-size: 0.7rem;
+}
