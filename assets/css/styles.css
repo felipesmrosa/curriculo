@@ -172,6 +172,29 @@
     .header {
         gap: 0rem 3rem;
     }
+    .acordeon.open .content ol.habilidades {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .acordeon.open .content ol.habilidades {
+        padding: 0;
+    }
+    .acordeon.open .content ol.habilidades li {
+        list-style: none;
+        margin-left: 2rem;
+    }
+    .skills .tools ul li img.toolsSkill {
+        width: 80%;
+    }
+    .acordeon.open .content ul#idiomas {
+        display: flex;
+        flex-direction: row;
+        gap: 5.3rem;
+    }
+    
 }
 
 @media screen and (min-width: 1920px) {
