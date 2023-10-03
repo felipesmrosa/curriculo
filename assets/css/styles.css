@@ -181,10 +181,12 @@
     }
     .acordeon.open .content ol.habilidades {
         padding: 0;
+        margin-top: 0.5rem;
     }
     .acordeon.open .content ol.habilidades li {
         list-style: none;
         margin-left: 2rem;
+        margin-top: 0.3rem;
     }
     .skills .tools ul li img.toolsSkill {
         width: 80%;
