@@ -261,5 +261,6 @@
     .acordeon.open .content ol.habilidades li {
         list-style: none;
         padding-left: 1rem;
+        margin: 0;
     }
 }
